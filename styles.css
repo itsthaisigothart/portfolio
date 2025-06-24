@@ -669,6 +669,7 @@ top: -20px;
 .slide {
   min-width: 100%;
   box-sizing: border-box;
+   aspect-ratio: 400px;
 
 }
 
@@ -682,13 +683,21 @@ top: -20px;
 
 
 .slide img {
-  width: 100%;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+    width: 100%;
   height: 100%;
   border: 5px solid #070707b6;
   border-radius: 10px;
   object-fit: cover;
   margin-top: 35px;
+  background-color: #1a1a1a; /* tom escuro neutro */
+    object-position: center center;
 
+}
+
+.slide.active img {
+  opacity: 1;
 }
 
 .slide figcaption {
@@ -702,11 +711,29 @@ top: -20px;
   transform: translateY(0);
 }
 
+.carrossel-inicio .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.carrossel-inicio .banner-slide {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carrossel-inicio .banner-slide.active {
+  opacity: 1;
+}
+
+
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   padding: 12px;
   font-size: 20px;
@@ -829,7 +856,7 @@ top: -20px;
   .sessao.contato,
   .sessao.playlist {
     margin: 25px 20px;
-    padding: 20px;
+    padding: 5px;
     background-color: #0a0a0a48;
     border: 2px solid #72000066;
     border-radius: 12px;
@@ -855,9 +882,10 @@ top: -20px;
     background: linear-gradient(to right, #2c0a0a, #720000, #2c0a0a);
     margin-top: 50px;
     box-shadow: 0 0 7px #2c0a0a99;
-    position: relative;
     top: -38px; /* opcional: mais controle fino */
   }
+
+
   .sessao.playlist #cookie-banner {
     flex-direction: column;
     gap: 10px;
@@ -870,6 +898,15 @@ top: -20px;
     height: auto;
     box-sizing: border-box;
   }
+  
+.slide img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #070707b6;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: -35px; 
+}
 
 
    .sobre-container {
@@ -877,7 +914,7 @@ top: -20px;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 0.5rem 0.3rem;
      margin-top: 220px; /* mantém a moldura na posição desejada */
 }
   
@@ -902,9 +939,9 @@ top: -20px;
   text-align: center;
   max-width: 100vw;
   margin-top: -165px; /* bem próximo, sem colar */
-  font-size: 0.7rem;
-  line-height: 1.7;
-  padding: 1px;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  padding: 25px;
 }
 
 
@@ -925,7 +962,7 @@ top: -20px;
     width: 70%;
     height: 70%;
     border-radius: 50%;
-  position: absolute;
+    position: absolute;
   z-index: 1; /* acima da moldura */
   /* demais propriedades */
 }
@@ -1142,12 +1179,9 @@ nav ul {
     max-width: 100vw;
     height: 100px !important;
   }
-
-
- .slide img {
-    margin-top: 13px; /* ou menos, teste o valor ideal */
-  }
 }
+
+
 
 .marquee {
   width: 100%;
@@ -1197,4 +1231,11 @@ nav ul {
     transform: translateX(100%);
     opacity: 1;
   }
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
 }
