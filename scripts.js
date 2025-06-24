@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalDots = 5;
   let currentSlide = 0;
   let autoPlayInterval;
+// Variáveis para controle do swipe touch
+  let startX = 0;
+  let endX = 0;
+
+  const slideContainer = document.querySelector(".slides");
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
@@ -71,6 +76,30 @@ function showSlide(index) {
     startAutoPlay();
   }
 
+   // --- SWIPE TOUCH EVENTS ---
+  if (slideContainer) {
+    slideContainer.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slideContainer.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 50) { // Sensibilidade mínima para swipe
+        if (diff > 0) {
+          // Swipe para esquerda - próximo slide
+          const newIndex = (currentSlide + 1) % slides.length;
+          showSlide(newIndex);
+        } else {
+          // Swipe para direita - slide anterior
+          const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(newIndex);
+        }
+        resetAutoPlay();
+      }
+    });
+  }
+  // --- FIM SWIPE ---
   // Inicia carrossel
   updateDots(0);
   showSlide(currentSlide);
