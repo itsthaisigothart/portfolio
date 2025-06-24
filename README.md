@@ -1,9 +1,9 @@
-# 🦇 Portfólio | Portfolio - itsthaisigothart
+# 🦇 Portfólio | Portfolio - itsthaisigothart 🩸
 
-👩‍🎨 Repositório do meu portfólio pessoal com foco em design gráfico, ilustração digital e estética gótica/vitoriana.  
+🩸 Repositório do meu portfólio pessoal com foco em design gráfico, ilustração digital e estética gótica/vitoriana.  
 🌐 Este site foi desenvolvido com HTML, CSS e JavaScript, e está hospedado via GitHub Pages.
 
-## 🔮 Sobre o projeto | About the Project
+## 🩸 Sobre o projeto | About the Project
 
 ### 🇧🇷 Em português:
 
@@ -21,18 +21,18 @@ This is a single-page portfolio project with a dark, gothic and vintage-inspired
 - Interactive carousel with multilingual captions
 - Mobile-friendly layout
 
-## 🛠️ Tecnologias utilizadas | Technologies used
+## 👩🏻‍💻 Tecnologias utilizadas | Technologies used
 
 - HTML5
 - CSS3 (com estilos personalizados)
 - JavaScript Vanilla (sem bibliotecas externas)
 - GitHub Pages (para hospedagem)
 
-## 🚀 Acesse o site | View the website
+## 🩸 Acesse o site | View the website
 
-📍 (https://itsthaisigothart.github.io/portfolio)
+🩸 (https://itsthaisigothart.github.io/portfolio)
 
-## 📬 Contato | Contact
+## ✉️ Contato | Contact
 
 📧 itsthaisigothart@gmail.com  
 📷 [Instagram](https://instagram.com/itsthaisigothart)  
