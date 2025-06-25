@@ -433,11 +433,10 @@ main {
   width: 100%;
   height: 1.8px;
   background: linear-gradient(to right, #2c0a0a, #720000, #2c0a0a);
-  margin-top: -25px;
-  /* Aumente o valor negativo para subir mais */
+  margin-top: 50px;
   box-shadow: 0 0 7px #2c0a0a99;
   position: relative;
-  top: 38px;
+  top: -38px;
   /* opcional: mais controle fino */
 }
 
@@ -448,6 +447,14 @@ main {
   margin-top: 50px;
   animation: fadeInUp 1.9s ease-out forwards;
 
+}
+
+.contato h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #7b0000;
+  text-align: center;
+  top: -20px;
 }
 
 .sessao.portfolio {
@@ -769,7 +776,8 @@ figure {
 .titulo {
   font-family: 'Des Malers Fraktur', serif;
   color: #ae010182;
-  padding: 7px 30px; /* Corrigido de 30x para 30px */
+  padding: 7px 30px;
+  /* Corrigido de 30x para 30px */
   margin-bottom: 10px;
   font-size: 1.9rem;
   text-shadow: 1px 1px 2px #000;
@@ -899,82 +907,10 @@ figure {
 
 /* Responsividade MOBILE */
 
-@media (max-width: 1024px) {
-  .conteudo {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .sobre,
-  .sessao.contato {
-    margin: 25px 20px;
-    padding: 20px;
-    background-color: #0a0a0a48;
-    border: 2px solid #72000066;
-    border-radius: 20px;
-    font-family: 'Elegant', serif;
-    box-shadow: 0 0 10px rgba(114, 0, 0, 0.3);
-    width: 90%;
-  }
-}
-/* 👶 Mobile muito pequeno */
-@media (max-width: 380px) {
-  /* Garante que o body não limite largura */
-  body {
-    overflow-x: hidden;
-  }
-
-  .carrossel,
-  .slides {
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 3px;
-    padding: 0;
-  }
-
-  .slide {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* evita cortes */
-    max-width: 100%;
-    max-height: 70vh;
-    border: 3px solid #200000ba;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    display: block;
-    box-sizing: border-box;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .slide img {
-    object-fit: contain;
-    width: 90%;
-    height: auto;
-    border: 3px solid #200000ba;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-}
-
 
 /* 📱 Mobile padrão até 768px */
 @media (max-width: 768px) {
+
   .sobre,
   .sessao.contato,
   .sessao.playlist,
@@ -1163,6 +1099,7 @@ figure {
 
 /* 💻 Tablets (entre 769px e 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+
   .sessao.portfolio,
   .sobre,
   .sessao.contato,
@@ -1180,6 +1117,7 @@ figure {
 
 /* 🖥️ Desktops grandes (acima de 1024px) */
 @media (min-width: 1025px) {
+
   .sessao.portfolio,
   .sobre,
   .sessao.contato,
