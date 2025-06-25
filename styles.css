@@ -446,6 +446,8 @@ main {
   line-height: 1.6;
   color: #d4c0a1;
   margin-top: 50px;
+  animation: fadeInUp 1.9s ease-out forwards;
+
 }
 
 .sessao.portfolio {
@@ -694,7 +696,7 @@ main {
 .slide {
   min-width: 100%;
   box-sizing: border-box;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   width: 100%;
   box-sizing: border-box;
   /* Garante proporção constante em todas as telas */
@@ -703,6 +705,8 @@ main {
   align-items: center;
   /* Alinha imagem verticalmente */
   justify-content: center;
+  padding-top: 2rem;
+  text-align: center;
 }
 
 .slide img {
@@ -713,10 +717,12 @@ main {
   border: 5px solid #070707b6;
   border-radius: 10px;
   transition: opacity 1.5s ease;
-  background-color: #1a1a1a;
+  background-color: #0a0a0a;
   margin-top: 0;
   /* Remova margens que podem causar corte */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* sombra mais discreta e natural */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* sombra mais discreta e natural */
+  min-height: 400px;
 }
 
 .slide.active {
@@ -756,6 +762,24 @@ main {
   /* JS controla a exibição */
 }
 
+figure {
+  position: relative;
+}
+
+.titulo {
+  font-family: 'Des Malers Fraktur', serif;
+  color: #ae010182;
+  padding: 7px 30px; /* Corrigido de 30x para 30px */
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+  text-shadow: 1px 1px 2px #000;
+  display: inline-block;
+}
+
+
+
+
+
 .carrossel-inicio .slides {
   display: flex;
   transition: transform 0.5s ease;
@@ -778,7 +802,7 @@ main {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   padding: 10px 10px;
   font-size: 10px;
@@ -925,10 +949,12 @@ main {
     width: 100%;
     height: 1.5px;
     background: linear-gradient(to right, #2c0a0a, #720000, #2c0a0a);
-    margin-top: 50px;
+    margin: 0;
     box-shadow: 0 0 7px #2c0a0a99;
-    top: -38px;
+  top: 0; /* removendo deslocamento para cima */
     /* opcional: mais controle fino */
+  position: relative; /* só se quiser usar o top */
+
   }
 
 
@@ -958,9 +984,25 @@ main {
     /* borda um pouco mais fina para não pesar */
     border-radius: 8px;
     /* suaviza o arredondamento no mobile */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* sombra mais discreta e natural */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* sombra mais discreta e natural */
   }
+.titulo, #portfolio .decor-line {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  top: auto !important;
+}
+.titulo {
+  font-family: 'Des Malers Fraktur', serif;
+  color: #ae010182;
+  padding: 3px 25px 3px 25px; /* padding vertical reduzido */
+  margin: 0 0 4px 0; /* só margem inferior pequena */
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #000;
+  display: inline-block;
 
+}
 
   .sobre-container {
     display: flex;
@@ -997,7 +1039,7 @@ main {
     /* bem próximo, sem colar */
     font-size: 0.6rem;
     line-height: 1.5;
-    padding: 25px;
+    padding: 10px;
   }
 
 
