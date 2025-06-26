@@ -1,8 +1,4 @@
-/* Fontes */
-@font-face {
-  font-family: 'Des Malers Fraktur';
-  src: url('src/fonts/des-malers-fraktur.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
 
 
 
@@ -444,7 +440,7 @@ main {
   font-size: 1rem;
   line-height: 1.6;
   color: #d4c0a1;
-  margin-top: 50px;
+  margin-top: 10px;
   animation: fadeInUp 1.9s ease-out forwards;
 
 }
@@ -774,7 +770,7 @@ figure {
 }
 
 .titulo {
-  font-family: 'Des Malers Fraktur', serif;
+  font-family: 'UnifrakturMaguntia', serif;
   color: #ae010182;
   padding: 7px 30px;
   /* Corrigido de 30x para 30px */
@@ -938,11 +934,11 @@ figure {
   }
 
   .titulo {
-    font-family: 'Des Malers Fraktur', serif;
+    font-family: 'UnifrakturMaguntia', serif;
     color: #ae010182;
     padding: 3px 25px;
     margin: 0 0 4px 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-shadow: 1px 1px 2px #000;
     display: inline-block;
   }
